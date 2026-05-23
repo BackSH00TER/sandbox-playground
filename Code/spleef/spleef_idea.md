@@ -32,6 +32,10 @@ Game Components:
     - need to add spawn points, make sure the spawn points are centered on a tile
         - can randomly pick a spawn point from an available tile, just ensure only one playe rspawns on a tile
 
+Future enhancement for the coundown:
+    - Put it in the world as a billboard, make all players spawn in looking at it. it can bounce up and down , and then when times up it can kind lift off and disappear
+    - maybe its some prop on like a lil balloon or something and floats off and despawns when starts
+
 - Scoreboard / Leaderboard
 
 Scenes:

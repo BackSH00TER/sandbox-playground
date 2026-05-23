@@ -122,6 +122,9 @@ public sealed class Tile : Component, Component.ITriggerListener
 	{
 		if ( !other.Tags.Has( "player" ) ) return;
 
+		// Don't react to players during the pre-match countdown.
+		if ( !GameState.IsPlaying ) return;
+
 		_playersOnTile++;
 
 		if ( !_triggered )
