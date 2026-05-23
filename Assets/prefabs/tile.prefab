@@ -9,7 +9,7 @@
     "Scale": "1,1,0.25",
     "Tags": "",
     "Enabled": true,
-    "NetworkMode": 2,
+    "NetworkMode": 1,
     "NetworkFlags": 0,
     "NetworkOrphaned": 0,
     "NetworkTransmit": true,
@@ -195,7 +195,6 @@
             "DepressSpeed": 25,
             "FallDuration": 2,
             "FallMass": 100,
-            "FlashColor": "1,0,0,1",
             "FlashSpeed": 12,
             "Model": {
               "_type": "component",
@@ -220,6 +219,10 @@
               "component_id": "5c93cb99-a1cf-4b71-b616-8d2b76d8d7f1",
               "go": "8d79bb99-487a-4213-b221-d8c878134be8",
               "component_type": "BoxCollider"
+            },
+            "TileRoot": {
+              "_type": "gameobject",
+              "go": "fcb4ec2e-b377-48ce-af8d-fd9d8f62ca10"
             },
             "TriggerCollider": {
               "_type": "component",

@@ -39,6 +39,9 @@ public sealed class Tile : Component, Component.ITriggerListener
 	/// <summary>Model renderer used for the white-flash effect and depression bob. Should be on a child GameObject so we can move it without moving the collider.</summary>
 	[Property] public ModelRenderer Model { get; set; }
 
+	/// <summary>The tile prefab root GameObject — the thing to destroy when the tile finishes falling. Wire this up in the prefab inspector.</summary>
+	[Property] public GameObject TileRoot { get; set; }
+
 	/// <summary>True once a player has stepped on the tile and the break timer has started.</summary>
 	private bool _triggered = false;
 
@@ -104,7 +107,8 @@ public sealed class Tile : Component, Component.ITriggerListener
 		}
 		else if ( _falling && _destroyAt <= 0 )
 		{
-			GameObject.Destroy();
+			// Destroy the explicit TileRoot reference wired up in the inspector.
+			TileRoot?.Destroy();
 		}
 
 		// Depression bob — only the visual Model moves, the colliders stay put.
