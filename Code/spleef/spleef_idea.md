@@ -21,9 +21,23 @@ Game Components:
 
 - KillZone
     - Area where player falls into
+    - Kill the player, force them into a spectate mode
+
+
+- Game level scene
+    - variable for how many platform levels to have, auto create them and space apart
+    - Needs a game state for when starting since it will spawn you on a tile and we dont want it to activate right away
+    - We should show a UI countdown from 10 to 1, GO. After that enable all the triggers. 
+        - during the countdown the players should be locked in place, not able to walk around, but can still move camera
+    - need to add spawn points, make sure the spawn points are centered on a tile
+        - can randomly pick a spawn point from an available tile, just ensure only one playe rspawns on a tile
 
 - Scoreboard / Leaderboard
 
 Scenes:
-- Lobby
+- Lobby Scene
+    - players join in, maybe theres a lil area where they can run around and goof off while ppl are joining
+    - a way to invite players, setting etc
+    - a start button they can press from within the world when ready
+
 - Game level (could have multiple variations)

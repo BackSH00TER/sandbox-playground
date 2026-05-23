@@ -40,113 +40,6 @@
       "Children": []
     },
     {
-      "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "Sun",
-      "Position": "0,0,0",
-      "Rotation": "-0.0729314983,0.482239604,0.130543306,0.863182724",
-      "Scale": "1,1,1",
-      "Tags": "light_directional,light",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.DirectionalLight",
-          "__guid": "d3659344-a90d-48fa-927a-095f70fe041f",
-          "__enabled": true,
-          "Flags": 0,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.94419,0.97767,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "ShadowBias": 0.0005,
-          "ShadowCascadeCount": 4,
-          "ShadowCascadeSplitRatio": 0.91,
-          "ShadowHardness": 0,
-          "Shadows": true,
-          "SkyColor": "0.2532,0.32006,0.35349,1",
-          "Visualizer": {}
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "2D Skybox",
-      "Position": "0,0,0",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "skybox",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.SkyBox2D",
-          "__guid": "de79e9e0-5c37-4c54-ac67-bfcdb1d5483b",
-          "__enabled": true,
-          "Flags": 0,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "SkyIndirectLighting": true,
-          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.EnvmapProbe",
-          "__guid": "f3e304db-baab-4c1a-a4ec-8442585c2d62",
-          "__enabled": true,
-          "Flags": 0,
-          "__version": 1,
-          "BakedTexture": null,
-          "Bounds": {
-            "Mins": "-512,-512,-512",
-            "Maxs": "512,512,512"
-          },
-          "DelayBetweenUpdates": 0.1,
-          "Feathering": 0.02,
-          "FrameInterval": 5,
-          "MaxDistance": 512,
-          "Mode": "CustomTexture",
-          "MultiBounce": false,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Priority": 0,
-          "Projection": "Sphere",
-          "Resolution": "Small",
-          "Texture": "textures/cubemaps/default2.vtex",
-          "TintColor": "1,1,1,1",
-          "UpdateStrategy": "OnEnabled",
-          "ZFar": 4096,
-          "ZNear": 16
-        }
-      ],
-      "Children": []
-    },
-    {
       "__guid": "6ad70641-3c6c-4402-9c85-9a4969af4764",
       "__version": 2,
       "Flags": 0,
@@ -438,7 +331,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": true,
-          "PreciseContacts": true,
           "RigidbodyFlags": "DisableCollisionSounds",
           "SleepThreshold": 2,
           "StartAsleep": false
@@ -615,7 +507,7 @@
           ],
           "Children": [
             {
-              "__guid": "ccde3967-8c8f-4b85-8cae-9ef800055ed0",
+              "__guid": "d48ffe80-d464-46aa-a37a-389b62c2636f",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - hair_longbrown",
@@ -632,7 +524,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "7bb66110-d771-4a2a-b4ab-23c387a8faa9",
+                  "__guid": "329e1ed2-d105-4a29-9166-0fcafb48a6bd",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -684,7 +576,7 @@
               "Children": []
             },
             {
-              "__guid": "064c19a8-43c1-4fce-8db3-8cd4a278767b",
+              "__guid": "16466a9f-1b69-4325-885a-ddf32f5c2f5c",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - football_tshirt",
@@ -701,7 +593,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "f3d409f4-bac9-4243-8852-4ff8ec3bf166",
+                  "__guid": "dd60fafd-1613-43bd-8656-4d266c3df4b4",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -753,7 +645,7 @@
               "Children": []
             },
             {
-              "__guid": "a9301c22-8c8c-441d-acfc-e006a69b168e",
+              "__guid": "851604d8-33cd-40e5-b1ff-da584c61bc80",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - boxing_boots",
@@ -770,7 +662,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "091bb0c3-bfdd-4554-b180-1199f203b246",
+                  "__guid": "457eb55c-ada8-46b4-b136-b8e183e6979a",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -822,7 +714,7 @@
               "Children": []
             },
             {
-              "__guid": "b4454d27-ef77-4162-996a-f82d28c582b2",
+              "__guid": "2faf7671-f254-4ae8-831a-c8827e4fb50c",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - labcoat",
@@ -839,7 +731,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "af014012-2934-4218-9706-d076410e4a3c",
+                  "__guid": "144ee3d4-d5bd-49bb-ae9a-637371fbe28a",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -891,7 +783,7 @@
               "Children": []
             },
             {
-              "__guid": "53713385-1258-4e32-b477-6d94b60d85a9",
+              "__guid": "9c99912a-996d-448e-a142-423a16aae119",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - goatee",
@@ -908,7 +800,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "c1c3c0fa-528b-40fe-8f70-10601b48a0d3",
+                  "__guid": "87a75e17-6b3e-44d8-9a49-beb030e58e1f",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -960,7 +852,7 @@
               "Children": []
             },
             {
-              "__guid": "b7c42ad6-5858-4546-ae1e-ab760da9e981",
+              "__guid": "5e301aa9-0e81-4f30-b0c8-b339890d7f6d",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - party_glasses",
@@ -977,7 +869,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "87cf5d49-aca5-430a-8f83-c4273a56dd5a",
+                  "__guid": "e506f256-81d0-419a-b09a-ea1cedd8fbf0",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -1029,7 +921,7 @@
               "Children": []
             },
             {
-              "__guid": "8687ea21-8970-4f38-97c5-d339870983ec",
+              "__guid": "2e8f6b81-7c41-4d51-a97f-e8010d989ce3",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - boxing_gloves_blue",
@@ -1046,7 +938,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "571c05c0-74c2-41be-b151-37890e360aad",
+                  "__guid": "57d66b0a-bf3b-401b-9f56-6778ec366462",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -1309,13 +1201,31 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "OverrideMassCenter": false,
-          "PreciseContacts": false,
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "90bf4760-78ca-4903-8944-c3885ccc2482",
+      "__version": 2,
+      "__Prefab": "prefabs/environment.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "c6d7e86d-8988-4860-be45-e5b2d4a4278a": "90bf4760-78ca-4903-8944-c3885ccc2482",
+        "37a82424-1472-4fba-879f-2e98a3381f14": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
+        "f0591d98-64d2-4a79-90db-7f4e3028e74c": "de79e9e0-5c37-4c54-ac67-bfcdb1d5483b",
+        "86aef45d-7c11-4535-8997-7b3cb67c9c50": "f3e304db-baab-4c1a-a4ec-8442585c2d62",
+        "a731499c-fcca-49c3-995f-0d13fd27a902": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
+        "e4a745f4-b694-488b-ace6-115223f1d5a6": "d3659344-a90d-48fa-927a-095f70fe041f"
+      }
     }
   ],
   "SceneProperties": {
@@ -1340,17 +1250,14 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
-      "Sandbox.Clutter.ClutterGridSystem": {
-        "Storage": {
-          "$blob": "b4fe6b02-0993-401a-80dc-7e23ed80f4de"
-        }
-      },
-      "Sandbox.MovieMaker.MovieRecorderSystem": {
-        "DisableClientRecording": false
-      },
       "Sandbox.SelectionSetsSystem": {
         "Data": {
           "SelectionSets": []
+        }
+      },
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "b4fe6b02-0993-401a-80dc-7e23ed80f4de"
         }
       }
     }
