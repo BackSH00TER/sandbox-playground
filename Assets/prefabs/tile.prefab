@@ -33,41 +33,6 @@
         "OwnerTransfer": 1,
         "Components": [
           {
-            "__type": "Sandbox.Rigidbody",
-            "__guid": "80ef57f2-b278-44cc-95a6-679dc98e3e17",
-            "__enabled": true,
-            "Flags": 0,
-            "AngularDamping": 0,
-            "EnableImpactDamage": true,
-            "EnhancedCcd": false,
-            "Gravity": true,
-            "GravityScale": 1,
-            "ImpactDamage": 0,
-            "LinearDamping": 0,
-            "Locking": {
-              "X": false,
-              "Y": false,
-              "Z": false,
-              "Pitch": false,
-              "Yaw": false,
-              "Roll": false
-            },
-            "MassCenterOverride": "0,0,0",
-            "MassOverride": 0,
-            "MinImpactDamageSpeed": 500,
-            "MotionEnabled": true,
-            "OnComponentDestroy": null,
-            "OnComponentDisabled": null,
-            "OnComponentEnabled": null,
-            "OnComponentFixedUpdate": null,
-            "OnComponentStart": null,
-            "OnComponentUpdate": null,
-            "OverrideMassCenter": false,
-            "RigidbodyFlags": 0,
-            "SleepThreshold": 2,
-            "StartAsleep": false
-          },
-          {
             "__type": "Sandbox.BoxCollider",
             "__guid": "5c93cb99-a1cf-4b71-b616-8d2b76d8d7f1",
             "__enabled": true,
@@ -208,12 +173,7 @@
             "OnComponentFixedUpdate": null,
             "OnComponentStart": null,
             "OnComponentUpdate": null,
-            "Rigidbody": {
-              "_type": "component",
-              "component_id": "80ef57f2-b278-44cc-95a6-679dc98e3e17",
-              "go": "8d79bb99-487a-4213-b221-d8c878134be8",
-              "component_type": "Rigidbody"
-            },
+            "Rigidbody": null,
             "SolidCollider": {
               "_type": "component",
               "component_id": "5c93cb99-a1cf-4b71-b616-8d2b76d8d7f1",

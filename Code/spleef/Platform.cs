@@ -1,4 +1,5 @@
 using Sandbox;
+using System.Linq;
 
 public sealed class Platform : Component
 {
@@ -28,6 +29,19 @@ public sealed class Platform : Component
 
     protected override void OnStart()
     {
+        BuildGrid();
+    }
+
+    /// <summary>Tear down any existing tile layers and build a fresh grid. Safe to call at runtime to reset the map.</summary>
+    public void Rebuild()
+    {
+        // Destroy any previously-spawned layer containers so we don't pile new tiles on top of old ones.
+        var existing = GameObject.Children.Where( c => c.IsValid() && c.Name.StartsWith( "Layer_" ) ).ToList();
+        foreach ( var layer in existing )
+        {
+            layer.Destroy();
+        }
+
         BuildGrid();
     }
 

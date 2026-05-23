@@ -27,11 +27,11 @@ public sealed class Tile : Component, Component.ITriggerListener
 	/// <summary>How quickly the model lerps toward its depressed/rest position.</summary>
 	[Property] public float DepressSpeed { get; set; } = 25f;
 
-	/// <summary>Rigidbody used to make the tile physically fall when it breaks.</summary>
-	[Property] public Rigidbody Rigidbody { get; set; }
-
 	/// <summary>Non-trigger collider that the player stands on. Switched to a trigger on break so the player falls through.</summary>
 	[Property] public Collider SolidCollider { get; set; }
+
+	/// <summary>Rigidbody created at break-time on the SolidCollider's GameObject so the tile can fall. Kept off the prefab so it doesn't fight the parent transform during spawn.</summary>
+	private Rigidbody Rigidbody;
 
 	/// <summary>Trigger collider that detects the player stepping onto the tile.</summary>
 	[Property] public Collider TriggerCollider { get; set; }
@@ -75,18 +75,18 @@ public sealed class Tile : Component, Component.ITriggerListener
 			_modelRestPosition = Model.LocalPosition;
 			_baseTint = Model.Tint;
 		}
-
-		if ( Rigidbody.IsValid() )
-		{
-			// Disable physics simulation so the tile stays put until it breaks.
-			Rigidbody.MotionEnabled = false;
-			// Set the mass override so when we enable physics on break, gravity actually makes it fall instead of just floating in place.
-			Rigidbody.MassOverride = FallMass;
-		}
 	}
 
 	protected override void OnUpdate()
 	{
+		// Start the break sequence only once the match is actually live, even if a player
+		// has been standing on us during the countdown.
+		if ( !_triggered && !_falling && _playersOnTile > 0 && GameState.IsPlaying )
+		{
+			_triggered = true;
+			_breakAt = BreakDelay;
+		}
+
 		if ( _triggered && !_falling )
 		{
 			float remaining = MathX.Clamp( (float)_breakAt / BreakDelay, 0f, 1f );
@@ -126,16 +126,10 @@ public sealed class Tile : Component, Component.ITriggerListener
 	{
 		if ( !other.Tags.Has( "player" ) ) return;
 
-		// Don't react to players during the pre-match countdown.
-		if ( !GameState.IsPlaying ) return;
-
+		// Always count players standing on us, even during the countdown. We gate the actual
+		// break sequence in OnUpdate so a player who's already standing here when the match
+		// starts still kicks off their tile's timer.
 		_playersOnTile++;
-
-		if ( !_triggered )
-		{
-			_triggered = true;
-			_breakAt = BreakDelay;
-		}
 	}
 
 	public void OnTriggerExit( Collider other )
@@ -161,8 +155,12 @@ public sealed class Tile : Component, Component.ITriggerListener
 		if ( TriggerCollider.IsValid() )
 			TriggerCollider.Enabled = false;
 
-		if ( Rigidbody.IsValid() )
+		// Add the Rigidbody NOW (not on the prefab) so it can't hijack the spawn transform.
+		// Attaching it to the SolidCollider's GameObject means physics has a body + shape to fall with.
+		if ( SolidCollider.IsValid() )
 		{
+			Rigidbody = SolidCollider.GameObject.AddComponent<Rigidbody>();
+			Rigidbody.MassOverride = FallMass;
 			Rigidbody.MotionEnabled = true;
 		}
 
