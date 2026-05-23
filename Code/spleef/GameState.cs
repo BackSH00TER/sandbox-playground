@@ -43,17 +43,13 @@ public sealed class GameState : Component
     protected override void OnEnabled()
     {
         Current = this;
+        StartCountdown();
     }
 
     protected override void OnDisabled()
     {
         if ( Current == this )
             Current = null;
-    }
-
-    protected override void OnStart()
-    {
-        StartCountdown();
     }
 
     public void StartCountdown()
